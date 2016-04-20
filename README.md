@@ -1,10 +1,10 @@
-# FTC-Robot-Controller-V1.6-Ramroid Master Branch!
+# FTC-Robot-Controller-V1.6-Ramroid Free-To-Play Branch
 
 #--Owned and operated by ACtheGreat. All Rights Reserved. (c)ACtheStudios Inc.
 
-This readme is only editable on other branches, so do not edit anything on Master Branch.
-
 Welcome to the repo! This is where everything is jammed together
+
+This is the free to play branch: Do anything you want, experiment with it! Have fun!
 
 Rules!:
 
