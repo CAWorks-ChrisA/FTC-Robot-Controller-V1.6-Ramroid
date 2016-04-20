@@ -1,3 +1,36 @@
+# FTC-Robot-Controller-V1.6-Ramroid Master Branch!
+
+#--Owned and operated by ACtheGreat. All Rights Reserved. (c)ACtheStudios Inc.
+
+This readme is only editable on other branches, so do not edit anything on Master Branch.
+
+Welcome to the repo! This is where everything is jammed together
+
+Rules!:
+
+1. NO EDITS ON MASTER BRANCH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+2. NO EDITS ON MASTER BRANCH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+3. NO EDITS ON MASTER BRANCH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+4. It is important, so I have to repeat it 3 times
+
+5. When you are coding, check your branch. You can do new branches, as long as you do not make a mess.
+
+6. Branches: do not edit on others. In your branch's readme, sign your name there, so that it is yours.
+
+7. Again, DO NOT MAKE ANY EDITS ON OTHERS BRANCH, unless they give permission
+
+
+
+
+
+
+
+
+
+
 # ftc_app
 FTC Android Studio project to create FTC Robot Controller app.
 
