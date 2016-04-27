@@ -1,97 +1,48 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
-/*
- * Created by TCHS Robotics on 1/19/2REST16.
+/**
+ * Created by TCHS Robotics on 4/27/2016.
  */
-public class Teleop extends hardware {
-
+public class teleop extends OpMode {
+    DcMotor motor1;
+    DcMotor motor2;
+    Servo servo1;
+    @Override
+    public void init() {
+        motor1 = hardwareMap.dcMotor.get("motorleft");
+        motor2 = hardwareMap.dcMotor.get("motorright");
+        servo1 = hardwareMap.servo.get("servo");
+        motor2.setDirection(DcMotor.Direction.REVERSE);
+    }
 
     @Override
     public void loop() {
-        //front is away from the bucket
-        set_drive_power(CLOCKWISE * gamepad1.left_stick_y, CLOCKWISE * gamepad1.right_stick_y);
+        //motor1.setPower(gamepad1.left_stick_y);
+        //motor2.setPower(gamepad1.right_stick_y);
 
-        //front is the bucket
-        if (gamepad1.dpad_up) {
-            set_drive_power(CLOCKWISE, CLOCKWISE);
+        if(gamepad1.left_stick_x >0.1){
+            motor1.setPower(gamepad1.left_stick_x);
+            motor2.setPower(-gamepad1.left_stick_x);
+        }
+        else if (gamepad1.left_stick_x <-0.1){
+            motor1.setPower(-gamepad1.left_stick_x);
+            motor2.setPower(gamepad1.left_stick_x);
+        }
+        else{
+            motor1.setPower(gamepad1.left_stick_y);
+            motor2.setPower(gamepad1.left_stick_y);
         }
 
-        if (gamepad1.dpad_down) {
-            set_drive_power(ANTICLOCKWISE, ANTICLOCKWISE);
+        if (gamepad1.a){
+            servo1.setPosition(1);
+        }
+        else if (gamepad1.b){
+            servo1.setPosition(0);
         }
 
-        if (gamepad1.dpad_left) {
-            set_drive_power(CLOCKWISE, ANTICLOCKWISE);
-        }
-
-        if (gamepad1.dpad_right) {
-            set_drive_power(ANTICLOCKWISE, CLOCKWISE);
-        }
-
-        //belt
-        if (gamepad2.dpad_left) {
-            belt.setPower(ANTICLOCKWISE);
-        }
-
-        else if (gamepad2.dpad_right) {
-
-            belt.setPower(CLOCKWISE);
-        }
-        else {
-            belt.setPower(REST);
-        }
-
-        //servos left side
-        if (gamepad2.a) {
-            left.setPosition(0.2);//up
-        }
-
-        else if (gamepad2.b) {
-            left.setPosition(0.8);//down
-        }
-
-        //servos right side
-        if (gamepad2.x) {
-            right.setPosition(0.2);//up
-        }
-
-        else if (gamepad2.y) {
-            right.setPosition(0.8);//down
-        }
-
-        //dunk master
-
-        if (gamepad2.dpad_down){
-
-            climber.setPosition(1);
-        }
-        else if (gamepad2.dpad_up){
-
-            climber.setPosition(0);
-        }
-        else {
-            climber.setPosition(0.5);
-        }
-
-        //bucket
-        if (gamepad1.a) {
-            bucket.setPower(0.2);
-        }
-
-        else if (gamepad1.b) {
-            bucket.setPower(-0.2);
-        }
-        else {
-            bucket.setPower(REST);
-        }
-
-        // tape if needed
-        /*
-        tape.setPower(0.5 * gamepad2.left_stick_y)
-        turn.setPower(0.2 * gamepad2.right_stick_y)
-         */
     }
 }
