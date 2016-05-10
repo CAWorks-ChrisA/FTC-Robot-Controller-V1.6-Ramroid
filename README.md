@@ -1,10 +1,12 @@
-# FTC-Robot-Controller-V1.6-Ramroid Master Branch!
+# FTC-Robot-Controller-V1.6-Ramroid 2016 Longden!
 
 #--Owned and operated by ACtheGreat. All Rights Reserved. (c)ACtheStudios Inc.
 
 This readme is only editable on other branches, so do not edit anything on Master Branch.
 
 Welcome to the repo! This is where everything is jammed together
+
+ps: ask eileen for perm to edit on this file..... been sick for a few days.....
 
 Rules!:
 
